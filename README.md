@@ -31,5 +31,4 @@ The design highlights elegance and usability, featuring a modern UI, bold food i
 ## 📦 Installation & Setup
 1. Clone the repository  
    ```bash
-   git clone https://github.com/your-username/restaurant-landing-page.git
-.com/your-Mathew-ak/restaurant-landing-page.git
+   git clone https://github.com/your-Akpamamathew/restaurant-landing-page.git

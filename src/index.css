@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Elegant Fine Dining Design System */
+
+@layer base {
+  :root {
+    /* Core Background Colors - Deep elegant tones */
+    --background: 20 14% 4%;
+    --background-secondary: 20 12% 8%;
+    --foreground: 43 32% 92%;
+    --foreground-muted: 43 20% 70%;
+
+    /* Card Colors - Rich dark surfaces */
+    --card: 20 12% 6%;
+    --card-foreground: 43 32% 92%;
+    --card-hover: 20 15% 10%;
+
+    /* Popover Colors */
+    --popover: 20 12% 6%;
+    --popover-foreground: 43 32% 92%;
+
+    /* Primary Colors - Elegant Gold */
+    --primary: 43 74% 66%;
+    --primary-glow: 43 84% 76%;
+    --primary-foreground: 20 14% 4%;
+
+    /* Secondary Colors - Wine/Burgundy */
+    --secondary: 356 75% 32%;
+    --secondary-hover: 356 75% 42%;
+    --secondary-foreground: 43 32% 92%;
+
+    /* Muted Colors */
+    --muted: 20 15% 15%;
+    --muted-foreground: 43 20% 55%;
+
+    /* Accent Colors - Warm highlights */
+    --accent: 30 35% 20%;
+    --accent-foreground: 43 32% 92%;
+
+    /* Border & Input */
+    --border: 20 20% 18%;
+    --input: 20 20% 18%;
+    --ring: 43 74% 66%;
+
+    --radius: 0.75rem;
+
+    /* Custom Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-hero: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+    --shadow-elegant: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Light mode styling - Reverse for elegance */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: "cv01", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Custom scroll bar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground;
+  }
+}
